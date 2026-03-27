@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('tg_users', function (Blueprint $table) {
             $table->id();
             $table->integer('tg_id');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('username');
-            $table->string('language_code');
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('username')->nullable();
+            $table->string('language_code')->nullable();
             $table->boolean('is_premium');
             $table->boolean('is_bot');
             $table->timestamps();
