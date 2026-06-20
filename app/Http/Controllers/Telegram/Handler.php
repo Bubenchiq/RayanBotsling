@@ -9,8 +9,6 @@ use Throwable;
 
 class Handler extends WebhookHandler
 {
-
-
     /**
      * @param string $text
      * @return void
@@ -77,7 +75,7 @@ class Handler extends WebhookHandler
      */
     public function end(): Void
     {
-        $isDead = collect(__('end'))->random();
+        $isDead = collect(__('end_of_film'))->random();
         $this->reply($isDead);
     }
 
